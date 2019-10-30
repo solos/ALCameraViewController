@@ -48,8 +48,6 @@ public func takePhoto(_ stillImageOutput: AVCaptureStillImageOutput, videoOrient
                 image = UIImage(cgImage: cgImage, scale: image.scale, orientation: .downMirrored)
             case .downMirrored:
                 image = UIImage(cgImage: cgImage, scale: image.scale, orientation: .down)
-            @unknown default:
-                break
             }
         }
         

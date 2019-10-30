@@ -86,8 +86,6 @@ internal func normalizedRect(_ rect: CGRect, orientation: UIImage.Orientation) -
         normalizedRect = CGRect(x: 1-normalizedY-normalizedHeight, y: normalizedX, width: normalizedHeight, height: normalizedWidth)
     case .right, .rightMirrored:
         normalizedRect = CGRect(x: normalizedY, y: 1-normalizedX-normalizedWidth, width: normalizedHeight, height: normalizedWidth)
-    @unknown default:
-        normalizedRect = .zero
     }
     
     return normalizedRect
@@ -101,8 +99,6 @@ internal func flashImage(_ mode: AVCaptureDevice.FlashMode) -> String {
     case .on:
         image = "flashOnIcon"
     case .off:
-        image = "flashOffIcon"
-    @unknown default:
         image = "flashOffIcon"
     }
     return image
